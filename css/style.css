@@ -1,0 +1,37 @@
+body {
+    background-color: silver;
+}
+
+.jumbotron {
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-bottom: 0px;
+}
+
+#game {
+    width: 100%;
+    padding: 0px 0px 0px 0px;
+    height: auto;
+}
+#game h5 {
+    padding-top: 10px;
+}
+#leftDiv, #rightDiv {
+    float: left;
+}
+#stats {
+    display: block;
+    overflow: auto;
+    clear: both;
+}
+#guess {
+    letter-spacing: 4px;
+}
+#gameButtons {
+    position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    bottom: 0px;
+    align-content: center;
+}
