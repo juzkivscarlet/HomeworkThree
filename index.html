@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en-us">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <title>Hangman!</title>
+
+        <link rel="shortcut icon" href="assets/icon.png">
+
+        <!-- Stylesheets: reset, Bootstrap, custom -->
+        <link rel="stylesheet" type="text/css" href="css/reset.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" crossorigin="anonymous">
+        <link rel="stylesheet" href="css/style.css">
+
+        <!-- Bootstrap JavaScript files -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+
+        <!-- jQuery -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    </head>
+
+    <body>
+
+        <div class="container">
+
+            <div class="jumbotron shadow p-3 mb-5 rounded" id="jumbotron">
+
+                <h1 class="display-4 text-center">Hangman!</h1>
+                <p class="lead">
+                    The game we loved to play in elementary school or at the dinner table. Now play against the computer! 
+                    But don't worry: you can still win!
+                </p>
+
+                <hr class="my-4">
+                <p class="text-muted text-center">Created by Matt Juskiw</p>
+
+            </div>
+
+            <hr>
+
+            <div class="row">
+
+                <div class="card shadow p-3 mb-5 rounded" id="game">
+                    <div class="row no-gutters">
+                    <div class="col-md-4">
+                        <canvas id="canvas" class="card-img border-right border-secondary" width="200" height="200"></canvas>
+                    </div>
+
+                    <div class="col-md-8">
+                        <div class="card-header">Hangman</div>
+                        <h5 class="card-title text-center" id="title">Guess the letters: </h5>
+                        <p class="card-text text-center">
+                            <span id="guess"></span>
+                        </p>
+                        <div class="card-body" id="stats">
+                            <div class="col-md-6" id="leftDiv">
+                                <p class="card-text" id="statsLeft">
+                                    Wrong guesses: <span id="wrongGuesses"></span><br>
+                                    Correct guesses: <span id="correctGuesses"></span><br>
+                                    Guesses left: <span id="lives"></span><br>
+                                </p>
+                            </div>
+                            <div class="col-md-6 border-left border-secondary" id="rightDiv">
+                                <p class="card-text" id="statsRight">
+                                    Wins: <span id="wins"></span><br>
+                                    Losses: <span id="losses"></span><br>
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="card-footer" id="gameButtons">
+                            <button type="button" class="btn btn-primary" id="new-word">New word</button>
+                            <button type="button" class="btn btn-secondary" id="give-up">Give up</button>
+                        </div>
+                    </div>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+
+        <!-- Custom JavaScript file -->
+        <script type="text/javascript" src="js/script.js"></script>
+
+    </body>
+</html>
